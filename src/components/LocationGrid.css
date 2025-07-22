@@ -1,0 +1,116 @@
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.locations-section {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+.location-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.location-image {
+  position: relative;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  font-size: 16px;
+  color: #666;
+  padding: 0;
+}
+
+.favorite-button:hover {
+  transform: scale(1.1);
+  background-color: #fff5f5;
+}
+
+.favorite-button.favorite-active {
+  color: #e11d48;
+  background-color: #fff5f5;
+}
+
+.favorite-button.favorite-active:hover {
+  background-color: #ffe4e4;
+}
+
+.location-info {
+  padding: 1rem;
+}
+
+.branch-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.branch-location, .branch-hours {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4B0082;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #666;
+  text-align: center;
+}

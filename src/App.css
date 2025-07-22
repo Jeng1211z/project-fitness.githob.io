@@ -1,0 +1,240 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap');
+
+.fitness-website {
+  font-family: 'Noto Sans Thai', sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #4A148C 0%, #18072E 50%, #140526 100%);
+  color: white;
+  width: 100%;
+  box-shadow: 0 3px 5px rgb(44, 0, 95);
+}
+
+/* Content Container */
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo-container {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  height: 60px; /* กำหนดความสูงคงที่ให้ container */
+}
+
+.logo {
+  height: 100px; /* ปรับขนาดโลโก้เป็น 100px */
+  width: auto;
+  transition: all 0.3s ease;
+  filter: brightness(1);
+  position: absolute; /* ใช้ absolute positioning เพื่อไม่ให้กระทบ layout อื่น */
+  top: 5px; /* ปรับตำแหน่งให้ยื่นลงมาด้านล่าง */
+  z-index: 10; /* ให้แสดงทับ element อื่น */
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.login-link {
+  font-weight: bold;
+}
+
+/* Search Bar */
+.search-container {
+  margin: 2rem auto;
+  max-width: 600px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #4B0082;
+  border-radius: 4px;
+}
+
+.search-button {
+  padding: 0.75rem;
+  width: 45px;
+  background-color: #4B0082;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #380062;
+  transform: scale(1.05);
+}
+
+/* Promotion Section */
+.promotion-section {
+  margin: 2rem 0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.promotion-subtitle {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.promotion-card {
+  
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #4B0082;
+}
+
+
+
+.promotion-content {
+  position: relative;
+}
+
+.promotion-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.promotion-desc {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.discount-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #4B0082;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Location Section */
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.location-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.location-image {
+  position: relative;
+  height: 200px;
+}
+
+.location-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.location-info {
+  padding: 1rem;
+}
+
+.branch-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.branch-location,
+.branch-hours {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.stats-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.stat-value {
+  font-weight: bold;
+  color: #4B0082;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9rem;
+}
